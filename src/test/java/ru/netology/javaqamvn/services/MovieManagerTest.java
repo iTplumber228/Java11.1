@@ -77,7 +77,7 @@ public class MovieManagerTest {
     }
     @Test
     public void findAllIfQtyLessLimit(){
-        MovieManager manager = new MovieManager(10);
+        MovieManager manager = new MovieManager(15);
         manager.add("movie 1");
         manager.add("movie 2");
         manager.add("movie 3");
