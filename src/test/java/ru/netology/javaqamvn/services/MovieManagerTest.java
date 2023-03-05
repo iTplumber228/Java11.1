@@ -34,8 +34,8 @@ public class MovieManagerTest {
         manager.add("movie 10");
 
 
-        String[] expect = manager.findLast();
-        String[] actual = {"movie 10", "movie 9", "movie 8", "movie 7", "movie 6", "movie 5", "movie 4", "movie 3", "movie 2", "movie 1"};
+        String[] actual = manager.findLast();
+        String[] expect = {"movie 10", "movie 9", "movie 8", "movie 7", "movie 6", "movie 5", "movie 4", "movie 3", "movie 2", "movie 1"};
         Assertions.assertArrayEquals(expect, actual);
     }
     @Test
@@ -53,8 +53,8 @@ public class MovieManagerTest {
         manager.add("movie 10");
 
 
-        String[] expect = manager.findAll();
-        String[] actual = {"movie 1", "movie 2", "movie 3", "movie 4", "movie 5", "movie 6", "movie 7", "movie 8", "movie 9", "movie 10"};
+        String[] actual = manager.findAll();
+        String[] expect = {"movie 1", "movie 2", "movie 3", "movie 4", "movie 5", "movie 6", "movie 7", "movie 8", "movie 9", "movie 10"};
         Assertions.assertArrayEquals(expect, actual);
     }
     @Test
@@ -71,13 +71,13 @@ public class MovieManagerTest {
         manager.add("movie 9");
         manager.add("movie 10");
 
-        String[] expect = manager.findAll();
-        String[] actual = {"movie 1", "movie 2", "movie 3", "movie 4", "movie 5", "movie 6", "movie 7", "movie 8", "movie 9", "movie 10"};
+        String[] actual = manager.findAll();
+        String[] expect = {"movie 1", "movie 2", "movie 3", "movie 4", "movie 5", "movie 6", "movie 7", "movie 8", "movie 9", "movie 10"};
         Assertions.assertArrayEquals(expect, actual);
     }
     @Test
     public void findAllIfQtyLessLimit(){
-        MovieManager manager = new MovieManager(9);
+        MovieManager manager = new MovieManager(11);
         manager.add("movie 1");
         manager.add("movie 2");
         manager.add("movie 3");
@@ -89,8 +89,9 @@ public class MovieManagerTest {
         manager.add("movie 9");
         manager.add("movie 10");
 
-        String[] expect = manager.findLast();
-        String[] actual = {"movie 10", "movie 9", "movie 8", "movie 7", "movie 6", "movie 5", "movie 4", "movie 3", "movie 2", "movie 1"};
+
+        String[] actual = manager.findLast();
+        String[] expect = {"movie 10", "movie 9", "movie 8", "movie 7", "movie 6", "movie 5", "movie 4", "movie 3", "movie 2", "movie 1"};
         Assertions.assertArrayEquals(expect, actual);
     }
 
