@@ -33,12 +33,12 @@ public class MovieManager {
     public String[] findLast() {
 
         int resultLength;
-        if (movies.length < 10) {
+        if (movies.length < (limit) ) {
             resultLength = movies.length;
         } else {
-            resultLength = 10;
+            resultLength =limit;
         }
-        String[] result = new String[10];
+        String[] result = new String[resultLength];
         for (int i = 0; i < result.length; i++) {
             result[i] = movies[movies.length - 1 - i];
         }
